@@ -26,12 +26,12 @@ public enum Logger {
         }
     }
 
-    static func info(_ message: String, shouldLogContext: Bool = true, function: String = #function) {
+    public static func info(_ message: String, shouldLogContext: Bool = true, function: String = #function) {
         let context = Context(function: function)
         Logger.handleLog(level: .info, message: message.description, shouldLogContext: shouldLogContext, context: context)
     }
 
-    static func error(_ message: String, shouldLogContext: Bool = true, function: String = #function) {
+    public static func error(_ message: String, shouldLogContext: Bool = true, function: String = #function) {
         let context = Context(function: function)
         Logger.handleLog(level: .error, message: message.description, shouldLogContext: shouldLogContext, context: context)
     }
