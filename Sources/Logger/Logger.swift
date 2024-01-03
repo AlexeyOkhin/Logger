@@ -6,7 +6,7 @@
 
 import Foundation
 
-enum Logger {
+public enum Logger {
     enum LogLevel: String {
         case info
         case error
