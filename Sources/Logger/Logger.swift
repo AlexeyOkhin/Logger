@@ -19,7 +19,7 @@ public enum Logger {
         }
     }
 
-    struct Context {
+    public struct Context {
         let function: String
         var description: String {
             return "\(function)"
