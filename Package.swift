@@ -8,6 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "Logger",
+            type: .dynamic,
             targets: ["Logger"]),
     ],
     targets: [
