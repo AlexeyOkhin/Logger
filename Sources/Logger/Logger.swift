@@ -20,7 +20,7 @@ public enum Logger {
         }
     }
 
-    struct Context {
+    private struct Context {
         let function: String
         var description: String {
             return "\(function)"
@@ -47,7 +47,7 @@ public enum Logger {
         Logger.handleLog(level: .error, message: message.description, shouldLogContext: shouldLogContext, context: context)
     }
 
-    fileprivate static func handleLog(level: LogLevel, message: String, shouldLogContext: Bool, context: Context) {
+    private static func handleLog(level: LogLevel, message: String, shouldLogContext: Bool, context: Context) {
 
         let logComponents = ["[\(level.prefix)]", message]
 
